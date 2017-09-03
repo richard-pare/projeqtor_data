@@ -2,6 +2,8 @@
 
 Cette table contient la liste des valeurs des fonctions qui peuvent être assignées aux ressources.
 
+> Écran: Paramètres > Listes de valeurs > Fonctions
+
 Colonnes|Description|Libelllé à l'écran
 --------|-----------|------------------
 id | Clé unique identifiant la fonction | id
