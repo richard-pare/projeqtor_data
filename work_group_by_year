@@ -1,0 +1,6 @@
+select project.name,activity.name, resource.fullName, work.year,sum(work.work),sum(work.cost)
+from work 
+join project ON work.idProject = project.id
+join activity ON (work.refId = activity.id and work.refType = "Activity")
+join resource on work.idResource = resource.id
+group by resource.fullName,work.year
