@@ -6,3 +6,4 @@ join resource on plannedwork.idResource = resource.id
 left join assignment on plannedwork.idAssignment = assignment.id
 left join role on assignment.idRole = role.id
 group by resource.fullName,role.name,plannedwork.week
+order by plannedwork.week,resource.fullName,role.name
