@@ -7,9 +7,9 @@ Colonnes|Description
 --------|-----------
 id | Clé unique identifiant l'effort
 idResource | Identifiant de la ressource [Table: Resource](/table_resource.md)
-idProject | Identifiant du projet **(Table: Project)**
-RefType et RefId | Identifiant de l'activité **(RefType = "Activity", Table: Activity)**
-idAssignment | Identifiant de l'assignation de la ressource à l'activité **(Table: Assignment)**
+idProject | Identifiant du projet [Table: Project](/table_project.md)
+RefType et RefId | Identifiant de l'activité **(RefType = "Activity")** [Table: Activity](/table_activity.md)
+idAssignment | Identifiant de l'assignation de la ressource à l'activité [Table: Assignment](/table_assignment.md)
 Work | Effort réel saisie du jour pour l'activité et selon la fonction
 WorkDate | Date de la saisie de l'effort **(AAAA-MM-JJ)**
 Day | Date de la saisie de l'effort **(Alphanumérique - AAAAMMJJ)**
