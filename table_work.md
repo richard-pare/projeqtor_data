@@ -2,7 +2,7 @@
 
 Cette table contient les efforts saisies sur les activités de projets.
 
-> Écran: Feuille de temps
+> Écran: Suivi > Feuille de temps
 
 
 Colonnes|Description
