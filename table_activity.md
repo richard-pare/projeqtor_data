@@ -10,7 +10,7 @@ Colonnes|Description|Libellé à l'écran
 --------|-----------|-----------------
 id | Clé unique identifiant l'activité | id
 idProjet | Identifiant du projet [Table: Project](/table_project.md) | projet
-idActivityType | Identifiant du type de projet [Table: Type](/table_type.md) | type d'activité
+idActivityType | Identifiant du type d'activité [Table: Type](/table_type.md) | type d'activité
 Name | Nom de l'activité | nom
 idStatus | État de l'activité [Table: Status](/table_status.md) | état
 idle | Indique que l'activité est close "Archivé" | clos
