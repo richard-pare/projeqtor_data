@@ -1,4 +1,4 @@
-# Table Work
+# Table: Work
 
 Cette table contient les efforts faites sur les activités de projet.
 
@@ -7,7 +7,6 @@ Colonnes|Description
 --------|-----------
 id | Clé unique identifiant l'effort
 idResource | Identifiant de la ressource [Table: Resource](/table_resource.md)
-
 idProject | Identifiant du projet **(Table: Project)**
 RefType et RefId | Identifiant de l'activité **(RefType = "Activity", Table: Activity)**
 idAssignment | Identifiant de l'assignation de la ressource à l'activité **(Table: Assignment)**
