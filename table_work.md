@@ -20,3 +20,13 @@ Mouth | Mois de la saisie de l'effort **(Alphanumérique - AAAAMM)**
 Year | Année de la saisie de l'effort **(Alphanumérique - AAAA)**
 DailyCost | Coût journalier de la ressource pour une fonction au moment de la saisie
 Cost | Coût réel de l'effort du jour pour l'activité et selon la fonction **(Work * DailyCost)**
+
+## Colonne: Work
+
+La valeur de cette colonne est conservée selon les paramètres : "unités pour la feuille de temps" et "nombre d'heures par jour".
+
+> Écran: Paramètres > Paramètres globaux - Section "Unité pour les efforts"
+
+Si la valeur du paramètre "unités pour la feuille de temps" est **"jours"** alors la donnée sera conservée telle que saisie **[1 jours = 1]**.
+
+Si la valeur du paramètre "unités pour la feuille de temps" est **"heures"** alors la donnée sera conservée comme une fraction de la journée  **[1 heure = (1 / nombre d'heures par jour)]**.
