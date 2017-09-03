@@ -16,7 +16,7 @@ Work | Effort réel saisie du jour pour l'activité et selon la fonction
 WorkDate | Date de la saisie de l'effort **(AAAA-MM-JJ)**
 Day | Date de la saisie de l'effort **(Alphanumérique - AAAAMMJJ)**
 Week | Semaine de la saisie de l'effort **(Alphanumérique - AAAAWW)**
-Mouth | Mois de la saisie de l'effort **(Alphanumérique - AAAAMM)**
+Month | Mois de la saisie de l'effort **(Alphanumérique - AAAAMM)**
 Year | Année de la saisie de l'effort **(Alphanumérique - AAAA)**
 DailyCost | Coût journalier de la ressource pour une fonction au moment de la saisie
 Cost | Coût réel de l'effort du jour pour l'activité et selon la fonction **(Work * DailyCost)**
