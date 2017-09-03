@@ -19,7 +19,7 @@ RealEndDate | Date de fin de la saisie des efforts
 Comment | Commentaires | Commentaires
 PlannedStartDate | Date de début planifiée
 PlannedEndDate | Date de fin planifiée
-idRole | Identifiant de la fonction de la ressource [Table: Role] | fonction
+idRole | Identifiant de la fonction de la ressource [Table: Role](/table_role.md) | fonction
 DailyCost ||coût
 NewDailyCost |
 AssignedCost |
