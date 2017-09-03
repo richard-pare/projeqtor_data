@@ -1,6 +1,8 @@
 # Table: Work
 
-Cette table contient les efforts faites sur les activités de projet.
+Cette table contient les efforts saisies sur les activités de projets.
+
+> Écran: Feuille de temps
 
 
 Colonnes|Description
