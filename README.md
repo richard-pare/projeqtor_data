@@ -12,6 +12,9 @@ Cette table contient les données saisies par la feuille de temps "Real work all
 
 Les requêtes SQL suivantes extraits la somme des efforts et des coûts des ressources.
 
+```sql
+```
+
 - [Par semaine](/work_group_by_week.sql)
 
 - [Par mois](/work_group_by_month.sql)
