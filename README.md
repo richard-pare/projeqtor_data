@@ -55,8 +55,6 @@ group by resource.fullName,role.name,work.year
 
 Via la table [resource](/table_resource.md), il est possible d'appliquer des filtres.
 
-> Écran: Paramètres d'environnement > Ressources
-
 ##### Par profil de sécurité
 
 _Seuls les efforts saisis des ressources qui ont le profil de sécurité "Membre d'équipe externe" (code profil: ETM)_
