@@ -22,7 +22,8 @@ join activity ON (work.refId = activity.id and work.refType = "Activity")
 join resource on work.idResource = resource.id
 left join assignment on work.idAssignment = assignment.id
 left join role on assignment.idRole = role.id
-group by resource.fullName,role.name,work.week```
+group by resource.fullName,role.name,work.week
+```
 
 ##### Par mois
 
