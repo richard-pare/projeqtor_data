@@ -61,8 +61,6 @@ Via la table [resource](/table_resource.md), il est possible d'appliquer des fil
 
 _Seuls les efforts saisis des ressources qui ont le profil de sécurité "Membre d'équipe externe" (code profil: ETM)_
 
-> Écran: Habilitations > Profils
-
 > Table: [profile](/table_profile.md)
 
 ```sql
@@ -80,8 +78,6 @@ where profile.profileCode = "ETM"
 ##### Par organisation
 
 _Seuls les efforts saisis des ressources qui sont membres de l'organisation "Organisation"_
-
-> Écran: Organisations
 
 > Table: [organization](/table_organization.md)
 
@@ -101,8 +97,6 @@ where organization.name = "Organisation"
 ##### Par équipe
 
 _Seuls les efforts saisis des ressources qui sont membres de l'équipe "Equipe"_
-
-> Écran: Paramètres d'environnement > Equipe
 
 > Table: [team](/table_team.md)
 
