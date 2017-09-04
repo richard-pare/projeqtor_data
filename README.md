@@ -53,7 +53,9 @@ group by resource.fullName,role.name,work.year
 
 #### Exemple #2 - Filtrer les efforts saisis
 
-Via la table [profile](/table_profile.md), il est possible d'appliquer des filtres.
+Via la table [resource](/table_resource.md), il est possible d'appliquer des filtres.
+
+> Écran: Paramètres d'environnement > Ressources
 
 ##### Par profil de sécurité
 
