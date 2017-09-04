@@ -74,3 +74,39 @@ left join profile on resource.idProfile = profile.id
 where profile.profileCode = "ETM"
 ```
 
+##### Par organisation
+
+_Seuls les efforts saisis des ressources qui sont membres de l'organisation "Organisation"_
+
+> Écran: Organisations
+
+
+```sql
+select project.name as "Nom projet",activity.name as "Nom activité", resource.fullName as "Nom ressource",role.name as "Fonction", work.workDate as "Journée",work.work as "Effort",work.cost as "Coût"
+from work 
+join project ON work.idProject = project.id
+join activity ON (work.refId = activity.id and work.refType = "Activity")
+join resource on work.idResource = resource.id
+left join assignment on work.idAssignment = assignment.id
+left join role on assignment.idRole = role.id
+left join organization on resource.idOrganization = organization.id
+where organization.name = "Organisation"
+```
+
+##### Par équipe
+
+_Seuls les efforts saisis des ressources qui sont membres de l'équipe "Equipe"_
+
+> Écran: Paramètres d'environnement > Equipe
+
+```sql
+select project.name as "Nom projet",activity.name as "Nom activité", resource.fullName as "Nom ressource",role.name as "Fonction", work.workDate as "Journée",work.work as "Effort",work.cost as "Coût"
+from work 
+join project ON work.idProject = project.id
+join activity ON (work.refId = activity.id and work.refType = "Activity")
+join resource on work.idResource = resource.id
+left join assignment on work.idAssignment = assignment.id
+left join role on assignment.idRole = role.id
+left join team on resource.idTeam = team.id
+where team.name = "Equipe"
+```
