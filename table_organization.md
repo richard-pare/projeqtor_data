@@ -13,5 +13,5 @@ Name | Nom de l'organisation | nom
 Description | Description de l'organisation | description
 idle | Indique si l'enregistrement est archivé (1: Clos) | Clos
 idResource | Resource qui est le gestionnaire de l'organisation | gestionnaire
-IdOrganizationType | Type d'organisation  [Table: Type](/table_type.md) | type d'organisation
+IdOrganizationType | Identifiant du type d'organisation  | type d'organisation
 IdOrganization | Identifiant de l'organisation parente | organisation parente
