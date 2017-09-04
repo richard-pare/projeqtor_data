@@ -24,9 +24,28 @@ left join assignment on work.idAssignment = assignment.id
 left join role on assignment.idRole = role.id
 group by resource.fullName,role.name,work.week
 ```
+##### Par mois
 
-- [Par semaine](/work_group_by_week.sql)
+```sql
+select project.name as "Nom projet",activity.name as "Nom activité", resource.fullName as "Nom ressource",role.name as "Fonction", work.month as "Mois",sum(work.work) as "Sum of work",sum(work.cost) as "Sum of cost"
+from work 
+join project ON work.idProject = project.id
+join activity ON (work.refId = activity.id and work.refType = "Activity")
+join resource on work.idResource = resource.id
+left join assignment on work.idAssignment = assignment.id
+left join role on assignment.idRole = role.id
+group by resource.fullName,role.name,work.month
+```
 
-- [Par mois](/work_group_by_month.sql)
+##### Par année
 
-- [Par année](/work_group_by_year.sql)
+```sql
+select project.name as "Nom projet",activity.name as "Nom activité", resource.fullName as "Nom ressource",role.name as "Fonction", work.year as "Année",sum(work.work) as "Sum of work",sum(work.cost) as "Sum of cost"
+from work 
+join project ON work.idProject = project.id
+join activity ON (work.refId = activity.id and work.refType = "Activity")
+join resource on work.idResource = resource.id
+left join assignment on work.idAssignment = assignment.id
+left join role on assignment.idRole = role.id
+group by resource.fullName,role.name,work.year
+```
