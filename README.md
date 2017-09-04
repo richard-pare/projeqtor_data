@@ -15,19 +15,19 @@ Les requêtes SQL suivantes extraits la somme des efforts et des coûts des ress
 ##### Par semaine
 
 ```sql
-select project.name as "Nom projet",activity.name as "Nom activité", resource.fullName as "Nom ressource",role.name as "Fonction", work.week as "Semaine",sum(work.work) as "Sum of work",sum(work.cost) as "Sum of cost"
+select project.name as "Nom projet",activity.name as "Nom activité", work.week as "Semaine", resource.fullName as "Nom ressource",role.name as "Fonction",sum(work.work) as "Efforts",sum(work.cost) as "Coûts"
 from work 
 join project ON work.idProject = project.id
 join activity ON (work.refId = activity.id and work.refType = "Activity")
 join resource on work.idResource = resource.id
 left join assignment on work.idAssignment = assignment.id
 left join role on assignment.idRole = role.id
-group by resource.fullName,role.name,work.week
-```
+group by resource.fullName,role.name,work.week```
+
 ##### Par mois
 
 ```sql
-select project.name as "Nom projet",activity.name as "Nom activité", resource.fullName as "Nom ressource",role.name as "Fonction", work.month as "Mois",sum(work.work) as "Sum of work",sum(work.cost) as "Sum of cost"
+select project.name as "Nom projet",activity.name as "Nom activité", work.month as "Mois", resource.fullName as "Nom ressource",role.name as "Fonction",sum(work.work) as "Efforts",sum(work.cost) as "Coûts"
 from work 
 join project ON work.idProject = project.id
 join activity ON (work.refId = activity.id and work.refType = "Activity")
@@ -40,7 +40,7 @@ group by resource.fullName,role.name,work.month
 ##### Par année
 
 ```sql
-select project.name as "Nom projet",activity.name as "Nom activité", resource.fullName as "Nom ressource",role.name as "Fonction", work.year as "Année",sum(work.work) as "Sum of work",sum(work.cost) as "Sum of cost"
+select project.name as "Nom projet",activity.name as "Nom activité", work.year as "Année", resource.fullName as "Nom ressource",role.name as "Fonction",sum(work.work) as "Efforts",sum(work.cost) as "Coûts"
 from work 
 join project ON work.idProject = project.id
 join activity ON (work.refId = activity.id and work.refType = "Activity")
