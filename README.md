@@ -63,6 +63,7 @@ _Seuls les efforts saisis des ressources qui ont le profil de sécurité "Membre
 
 > Écran: Habilitations > Profils
 
+> Table: [profile](/table_profile.md)
 
 ```sql
 select project.name as "Nom projet",activity.name as "Nom activité", resource.fullName as "Nom ressource",role.name as "Fonction", work.workDate as "Journée",work.work as "Effort",work.cost as "Coût"
@@ -82,6 +83,8 @@ _Seuls les efforts saisis des ressources qui sont membres de l'organisation "Org
 
 > Écran: Organisations
 
+> Table: [organization](/table_organization.md)
+
 
 ```sql
 select project.name as "Nom projet",activity.name as "Nom activité", resource.fullName as "Nom ressource",role.name as "Fonction", work.workDate as "Journée",work.work as "Effort",work.cost as "Coût"
@@ -100,6 +103,8 @@ where organization.name = "Organisation"
 _Seuls les efforts saisis des ressources qui sont membres de l'équipe "Equipe"_
 
 > Écran: Paramètres d'environnement > Equipe
+
+> Table: [team](/table_team.md)
 
 ```sql
 select project.name as "Nom projet",activity.name as "Nom activité", resource.fullName as "Nom ressource",role.name as "Fonction", work.workDate as "Journée",work.work as "Effort",work.cost as "Coût"
