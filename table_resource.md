@@ -16,5 +16,4 @@ id | Clé unique identifiant la ressource | id
 FullName | Nom de la ressource | Nom usuel
 idProfile | Identifiant du profil de sécurité [Table: Profile](/table_profile.md) | profil
 idTeam | Identifiant de l'équipe dans lequel la ressource est membre [Table: Team](/table_team.md) | équipe
-idRole | Identifiant de la fonction par défaut de la ressource [Table: Role](/table_role.md) | fonction principale
 IdOrganization | Identifiant de l'organisation à laquelle la ressource appartient [Table: Organization](/table_organization.md)  | organisation
