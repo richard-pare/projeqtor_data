@@ -39,7 +39,7 @@ Il est possible d'appliquer des filtres.
 
 _Seuls les efforts saisis des ressources qui ont le profil de sécurité "Membre d'équipe externe" (code profil: ETM)_
 
-> Table: [profile](/table_profile.md)
+> Table: [Profile](/table_profile.md)
 
 ```sql
 SELECT 
@@ -64,7 +64,7 @@ WHERE profile.profileCode = 'ETM'
 
 _Seuls les efforts saisis des ressources qui sont membres de l'organisation "Organisation"_
 
-> Table: [organization](/table_organization.md)
+> Table: [Organization](/table_organization.md)
 
 
 ```sql
@@ -90,7 +90,7 @@ WHERE organization.name = 'Organisation'
 
 _Seuls les efforts saisis des ressources qui sont membres de l'équipe "Equipe"_
 
-> Table: [team](/table_team.md)
+> Table: [Team](/table_team.md)
 
 ```sql
 SELECT 
