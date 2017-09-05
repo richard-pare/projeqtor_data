@@ -15,8 +15,7 @@ idle | Indique si le profil est clos "Archivé" (1: Clos) | clos
 
 ## Profils à l'installation (Nom du profil)
 
-Pour les profils disponibles à l'installation, le nom des profils sont en anglais, mais traduit dans la langue d'affichage.
+Pour les profils disponibles à l'installation, le nom des profils sont stockés en langue anglaise dans la table et ils sont affichés à l'écran dans la langue de l'utilisateur.
 
-Pour ces profils, il est conseillé d'utiliser le code du profil.
-
+**Recommandation: Utiliser le code du profil comme valeur de filtre plutôt que le nom du profil.**
 
