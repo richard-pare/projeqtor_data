@@ -4,7 +4,7 @@ Ce répertoire est utilisé pour présenter les possibilités d'extraction des d
 
 ## Suivi des efforts et des coûts des ressources
 
-### Table: [Work](/table_work.md)
+### Table: [Work](/tables/table_work.md)
 
 Cette table contient les données saisies par la feuille de temps "Real work allocation". Chaque enregistrement corresponds au temps travaillé d'une ressource (real work) dans une journée pour une activité et pour une fonction.
 
@@ -31,7 +31,7 @@ LEFT JOIN assignment ON work.idAssignment = assignment.id
 LEFT JOIN role ON assignment.idRole = role.id
 ```
 
-#### Exemple #2 - Filtrer les efforts saisis via la table [Resource](/table_resource.md)
+#### Exemple #2 - Filtrer les efforts saisis via la table [Resource](/tables/table_resource.md)
 
 Il est possible d'appliquer des filtres.
 
@@ -39,7 +39,7 @@ Il est possible d'appliquer des filtres.
 
 _Seuls les efforts saisis des ressources qui ont le profil de sécurité "Membre d'équipe externe" (code profil: ETM)_
 
-> Table: [Profile](/table_profile.md)
+> Table: [Profile](/tables/table_profile.md)
 
 ```sql
 SELECT 
@@ -64,7 +64,7 @@ WHERE profile.profileCode = 'ETM'
 
 _Seuls les efforts saisis des ressources qui sont membres de l'organisation "Organisation"_
 
-> Table: [Organization](/table_organization.md)
+> Table: [Organization](/tables/table_organization.md)
 
 
 ```sql
@@ -90,7 +90,7 @@ WHERE organization.name = 'Organisation'
 
 _Seuls les efforts saisis des ressources qui sont membres de l'équipe "Equipe"_
 
-> Table: [Team](/table_team.md)
+> Table: [Team](/tables/table_team.md)
 
 ```sql
 SELECT 
