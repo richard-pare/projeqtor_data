@@ -15,20 +15,51 @@ Cette table contient les données saisies par la feuille de temps "Real work all
 Une requête qui liste tous les efforts saisis.
 
 ```sql
-SELECT 
-    project.name AS 'Nom projet',
-    activity.name AS 'Nom activité',
+(SELECT 
     resource.fullName AS 'Nom ressource',
+    work.workDate AS 'Journée',    
+    project.name AS 'Nom projet',
+    CONCAT('Activité (',activity.name,')') AS 'Tâche',
     role.name AS 'Fonction',
-    work.workDate AS 'Journée',
     work.work AS 'Effort',
-    work.cost AS 'Coût'
+    IFNULL(work.cost, 0) AS 'Coût'
 FROM work
 JOIN project ON work.idProject = project.id
 JOIN activity ON (work.refId = activity.id AND work.refType = 'Activity')
 JOIN resource ON work.idResource = resource.id
 LEFT JOIN assignment ON work.idAssignment = assignment.id
-LEFT JOIN role ON assignment.idRole = role.id
+LEFT JOIN role ON assignment.idRole = role.id)
+UNION ALL
+(SELECT 
+    resource.fullName,
+    work.workDate,    
+    project.name,
+    CONCAT('Rencontre (',meeting.name,')'),
+    role.name,
+    work.work,
+    IFNULL(work.cost, 0)
+FROM work
+JOIN project ON work.idProject = project.id
+JOIN meeting ON (work.refId = meeting.id AND work.refType = 'Meeting')
+JOIN resource ON work.idResource = resource.id
+LEFT JOIN assignment ON work.idAssignment = assignment.id
+LEFT JOIN role ON assignment.idRole = role.id)
+UNION ALL
+(SELECT 
+    resource.fullName,
+    work.workDate,    
+    project.name,
+    CONCAT('Session de test (',testsession.name,')'),
+    role.name,
+    work.work,
+    IFNULL(work.cost, 0)
+FROM work
+JOIN project ON work.idProject = project.id
+JOIN testsession ON (work.refId = testsession.id AND work.refType = 'TestSession')
+JOIN resource ON work.idResource = resource.id
+LEFT JOIN assignment ON work.idAssignment = assignment.id
+LEFT JOIN role ON assignment.idRole = role.id)
+ORDER BY 1 , 2 , 3 , 4 , 5
 ```
 
 #### Exemple #2 - Filtrer les efforts saisis via la table [Resource](/tables/table_resource.md)
