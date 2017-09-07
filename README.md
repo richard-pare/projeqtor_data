@@ -21,10 +21,11 @@ Cette requête unie tous les efforts saisis sur les tâches de projet (activité
 ```sql
 (SELECT 
     resource.fullName AS 'Nom ressource',
+    role.name AS 'Fonction',    
     work.workDate AS 'Journée',    
     project.name AS 'Nom projet',
     CONCAT('Activité (',activity.name,')') AS 'Tâche',
-    role.name AS 'Fonction',
+
     work.work AS 'Effort',
     IFNULL(work.cost, 0) AS 'Coût'
 FROM work
@@ -36,10 +37,10 @@ LEFT JOIN role ON assignment.idRole = role.id)
 UNION ALL
 (SELECT 
     resource.fullName,
+    role.name,    
     work.workDate,    
     project.name,
     CONCAT('Rencontre (',meeting.name,')'),
-    role.name,
     work.work,
     IFNULL(work.cost, 0)
 FROM work
@@ -51,10 +52,10 @@ LEFT JOIN role ON assignment.idRole = role.id)
 UNION ALL
 (SELECT 
     resource.fullName,
+    role.name,    
     work.workDate,    
     project.name,
     CONCAT('Session de test (',testsession.name,')'),
-    role.name,
     work.work,
     IFNULL(work.cost, 0)
 FROM work
@@ -97,33 +98,22 @@ LEFT JOIN profile ON resource.idProfile = profile.id
 WHERE profile.profileCode = 'MES'
 ORDER BY 1 , 2 , 3 , 4 , 5
 ```
-
-Résultats:
-
-Nom ressource|Fonction|Journée|Nom projet|Tâche|Effort|Coût
--------------|--------|-------|----------|-----|------|----
-Membre simple|Expert|2017-06-26|activités hors des projets|Activité (Formation)|1.00000|600.00
-Membre simple|Expert|2017-06-27|activités hors des projets|Activité (Formation)|1.00000|600.00
-Membre simple|Expert|2017-06-28|activités hors des projets|Activité (Formation)|1.00000|600.00
-Membre simple|Expert|2017-06-29|activités hors des projets|Activité (Formation)|1.00000|600.00
-
-
 ##### Par organisation
 
-_Seuls les efforts saisis des ressources qui sont membres de l'organisation "Organisation"_
+_Seuls les efforts saisis des ressources qui sont membres de l'organisation "Poly IND 6130 E2017"_
 
 > Table: [Organization](/tables/table_organization.md)
 
 
 ```sql
 SELECT 
-    project.name AS 'Nom projet',
-    activity.name AS 'Nom activité',
     resource.fullName AS 'Nom ressource',
     role.name AS 'Fonction',
-    work.workDate AS 'Journée',
+    work.workDate AS 'Journée',    
+    project.name AS 'Nom projet',
+    CONCAT('Activité (',activity.name,')') AS 'Tâche',    
     work.work AS 'Effort',
-    work.cost AS 'Coût'
+    IFNULL(work.cost, 0) AS 'Coût'
 FROM work
 JOIN project ON work.idProject = project.id
 JOIN activity ON (work.refId = activity.id AND work.refType = 'Activity')
@@ -131,24 +121,25 @@ JOIN resource ON work.idResource = resource.id
 LEFT JOIN assignment ON work.idAssignment = assignment.id
 LEFT JOIN role ON assignment.idRole = role.id
 LEFT JOIN organization ON resource.idOrganization = organization.id
-WHERE organization.name = 'Organisation'
+WHERE organization.name = "Poly IND 6130 E2017"
+ORDER BY 1 , 2 , 3 , 4 , 5
 ```
 
 ##### Par équipe
 
-_Seuls les efforts saisis des ressources qui sont membres de l'équipe "Equipe"_
+_Seuls les efforts saisis des ressources qui sont membres de l'équipe "Équipe 2 IND 6130 E 2017"_
 
 > Table: [Team](/tables/table_team.md)
 
 ```sql
 SELECT 
-    project.name AS 'Nom projet',
-    activity.name AS 'Nom activité',
     resource.fullName AS 'Nom ressource',
     role.name AS 'Fonction',
-    work.workDate AS 'Journée',
+    work.workDate AS 'Journée',    
+    project.name AS 'Nom projet',
+    CONCAT('Activité (',activity.name,')') AS 'Tâche',    
     work.work AS 'Effort',
-    work.cost AS 'Coût'
+    IFNULL(work.cost, 0) AS 'Coût'
 FROM work
 JOIN project ON work.idProject = project.id
 JOIN activity ON (work.refId = activity.id AND work.refType = 'Activity')
@@ -156,7 +147,8 @@ JOIN resource ON work.idResource = resource.id
 LEFT JOIN assignment ON work.idAssignment = assignment.id
 LEFT JOIN role ON assignment.idRole = role.id
 LEFT JOIN team ON resource.idTeam = team.id
-WHERE team.name = 'Equipe'
+WHERE team.name = 'Équipe 2 IND 6130 E 2017'
+ORDER BY 1 , 2 , 3 , 4 , 5
 ```
 
 
