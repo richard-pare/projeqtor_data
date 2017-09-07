@@ -98,16 +98,15 @@ WHERE profile.profileCode = 'MES'
 ORDER BY 1 , 2 , 3 , 4 , 5
 ```
 
-```
 Résultats:
 
-|Nom ressource|Fonction|Journée|Nom projet|Tâche|Effort|Coût|
-|-------------|--------|-------|----------|-----|------|----|
-|Membre simple|Expert;2017-06-26|activités hors des projets|Activité (Formation)|1.00000|600.00|
-|Membre simple|Expert;2017-06-27|activités hors des projets|Activité (Formation)|1.00000|600.00|
-|Membre simple|Expert;2017-06-28|activités hors des projets|Activité (Formation)|1.00000|600.00|
-|Membre simple|Expert;2017-06-29|activités hors des projets|Activité (Formation)|1.00000|600.00|
-```
+Nom ressource|Fonction|Journée|Nom projet|Tâche|Effort|Coût
+-------------|--------|-------|----------|-----|------|----
+Membre simple|Expert|2017-06-26|activités hors des projets|Activité (Formation)|1.00000|600.00
+Membre simple|Expert|2017-06-27|activités hors des projets|Activité (Formation)|1.00000|600.00
+Membre simple|Expert|2017-06-28|activités hors des projets|Activité (Formation)|1.00000|600.00
+Membre simple|Expert|2017-06-29|activités hors des projets|Activité (Formation)|1.00000|600.00
+
 
 ##### Par organisation
 
