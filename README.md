@@ -14,9 +14,11 @@ Une tâche peut être une activité, une recontre ou une session de test.
 
 > Voir: [modèle de données](/md_facette_effort_reel.png)
 
-#### Exemple #1 - Requête simple
+#### Exemple #1 - Liste tous les efforts saisis sur les tâches
 
-Une requête qui liste tous les efforts saisis.
+Cette requête unie tous les efforts saisis sur les tâches de projet (activité, rencontre, session de test).
+
+> Notez bien la colonne coût peut être NULL, si le coût journalier de la ressource pour une fonction n'a pas été précisé.
 
 ```sql
 (SELECT 
