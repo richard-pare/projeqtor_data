@@ -1,8 +1,10 @@
 # Table: PlanningElement
 
-Cette table contient les informations sur les éléments de planification: projet, tâche (activité, rencontre, session de test), jalon.
+Cette table contient les informations sur les éléments de planification: projet, tâche (activité, rencontre, session de test), jalon. Hiéarchie et avancement
 
 Les données de cette table sont déjà aggrégées par type d'élément de planfication.
+
+
 
 **(Toutes les colonnes ne sont pas affichées)**
 
@@ -22,6 +24,12 @@ InitialEndDate |
 ValidatedEndDate |
 PlannedEndDate |
 RealEndDate |
+InitialDuration |
+ValidatedDuration |
+PlannedDuration |
+RealDuration |
+Idle |
+Elementary | 
 
 
 idClient | Identifiant du client du projet [Table: Client](table_client.md) | client
