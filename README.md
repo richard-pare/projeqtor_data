@@ -161,7 +161,7 @@ Les requêtes SQL suivantes extraits la somme des efforts et des coûts des ress
 ```sql
 SELECT 
     project.name AS 'Nom projet',
-    activity.name AS 'Nom activité',
+    CONCAT('Activité (',activity.name,')') AS 'Tâche',
     work.week AS 'Semaine',
     resource.fullName AS 'Nom ressource',
     role.name AS 'Fonction',
@@ -174,6 +174,7 @@ JOIN resource ON work.idResource = resource.id
 LEFT JOIN assignment ON work.idAssignment = assignment.id
 LEFT JOIN role ON assignment.idRole = role.id
 GROUP BY resource.fullName , role.name , work.week
+ORDER BY 1,2,3,4,5
 ```
 
 ##### Par mois
@@ -181,7 +182,7 @@ GROUP BY resource.fullName , role.name , work.week
 ```sql
 SELECT 
     project.name AS 'Nom projet',
-    activity.name AS 'Nom activité',
+    CONCAT('Activité (',activity.name,')') AS 'Tâche',
     work.month AS 'Mois',
     resource.fullName AS 'Nom ressource',
     role.name AS 'Fonction',
@@ -194,6 +195,7 @@ JOIN resource ON work.idResource = resource.id
 LEFT JOIN assignment ON work.idAssignment = assignment.id
 LEFT JOIN role ON assignment.idRole = role.id
 GROUP BY resource.fullName , role.name , work.month
+ORDER BY 1,2,3,4,5
 ```
 
 ##### Par année
@@ -201,7 +203,7 @@ GROUP BY resource.fullName , role.name , work.month
 ```sql
 SELECT 
     project.name AS 'Nom projet',
-    activity.name AS 'Nom activité',
+    CONCAT('Activité (',activity.name,')') AS 'Tâche',
     work.year AS 'Année',
     resource.fullName AS 'Nom ressource',
     role.name AS 'Fonction',
@@ -214,5 +216,5 @@ JOIN resource ON work.idResource = resource.id
 LEFT JOIN assignment ON work.idAssignment = assignment.id
 LEFT JOIN role ON assignment.idRole = role.id
 GROUP BY resource.fullName , role.name , work.year
-```
+ORDER BY 1,2,3,4,5```
 
