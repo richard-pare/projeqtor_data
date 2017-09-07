@@ -66,25 +66,27 @@ LEFT JOIN role ON assignment.idRole = role.id)
 ORDER BY 1 , 2 , 3 , 4 , 5
 ```
 
-#### Exemple #2 - Filtrer les efforts saisis via la table [Resource](/tables/table_resource.md)
+#### Exemple #2 - Filtrer la liste des ressources
 
-Il est possible d'appliquer des filtres.
+Il est possible de filtrer la liste des ressource via la table [Resource](/tables/table_resource.md)
+
+> Notez bien que pour simplifier les requêtes seuls efforts saisis sur les activités sont utilisés comme exemple. Les filtres peuvent s'appliquer aussi aux rencontres et aux sessions de test.
 
 ##### Par profil de sécurité
 
-_Seuls les efforts saisis des ressources qui ont le profil de sécurité "Membre d'équipe externe" (code profil: ETM)_
+_Seuls les efforts saisis des ressources qui ont le profil de sécurité "Membre d'équipe simple" (code profil: MES)_
 
 > Table: [Profile](/tables/table_profile.md)
 
 ```sql
 SELECT 
-    project.name AS 'Nom projet',
-    activity.name AS 'Nom activité',
     resource.fullName AS 'Nom ressource',
     role.name AS 'Fonction',
-    work.workDate AS 'Journée',
+    work.workDate AS 'Journée',    
+    project.name AS 'Nom projet',
+    CONCAT('Activité (',activity.name,')') AS 'Tâche',    
     work.work AS 'Effort',
-    work.cost AS 'Coût'
+    IFNULL(work.cost, 0) AS 'Coût'
 FROM work
 JOIN project ON work.idProject = project.id
 JOIN activity ON (work.refId = activity.id AND work.refType = 'Activity')
@@ -92,7 +94,19 @@ JOIN resource ON work.idResource = resource.id
 LEFT JOIN assignment ON work.idAssignment = assignment.id
 LEFT JOIN role ON assignment.idRole = role.id
 LEFT JOIN profile ON resource.idProfile = profile.id
-WHERE profile.profileCode = 'ETM'
+WHERE profile.profileCode = 'MES'
+ORDER BY 1 , 2 , 3 , 4 , 5
+```
+
+```
+Résultats:
+
+|Nom ressource|Fonction|Journée|Nom projet|Tâche|Effort|Coût|
+|-------------|--------|-------|----------|-----|------|----|
+|Membre simple|Expert;2017-06-26|activités hors des projets|Activité (Formation)|1.00000|600.00|
+|Membre simple|Expert;2017-06-27|activités hors des projets|Activité (Formation)|1.00000|600.00|
+|Membre simple|Expert;2017-06-28|activités hors des projets|Activité (Formation)|1.00000|600.00|
+|Membre simple|Expert;2017-06-29|activités hors des projets|Activité (Formation)|1.00000|600.00|
 ```
 
 ##### Par organisation
