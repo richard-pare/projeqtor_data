@@ -6,7 +6,11 @@ Ce répertoire est utilisé pour présenter les possibilités d'extraction des d
 
 ### Table: [Work](/tables/table_work.md)
 
-Cette table contient les données saisies par la feuille de temps "Real work allocation". Chaque enregistrement corresponds au temps travaillé d'une ressource (real work) dans une journée pour une activité et pour une fonction.
+Cette table contient les données saisies par la feuille de temps "Real work allocation". Chaque enregistrement corresponds au temps travaillé d'une ressource (real work) dans une journée pour une tâche et pour une fonction.
+
+#### Tâche
+
+Une tâche peut être une activité, une recontre ou une session de test.
 
 > Voir: [modèle de données](/md_facette_effort_reel.png)
 
