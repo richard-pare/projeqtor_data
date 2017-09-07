@@ -12,8 +12,6 @@ Cette table contient les données saisies par la feuille de temps "Real work all
 
 Une tâche peut être une activité, une recontre ou une session de test.
 
-> Voir: [modèle de données](/md_facette_effort_reel.png)
-
 #### Exemple #1 - Liste tous les efforts saisis sur les tâches
 
 Cette requête unie tous les efforts saisis sur les tâches de projet (activité, rencontre, session de test).
