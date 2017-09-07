@@ -202,11 +202,11 @@ ORDER BY 1,2,3,4,5
 
 ```sql
 SELECT 
-    project.name AS 'Nom projet',
-    CONCAT('Activité (',activity.name,')') AS 'Tâche',
     work.year AS 'Année',
     resource.fullName AS 'Nom ressource',
-    role.name AS 'Fonction',
+    role.name AS 'Fonction',    
+    project.name AS 'Nom projet',
+    CONCAT('Activité (',activity.name,')') AS 'Tâche',
     SUM(work.work) AS 'Efforts',
     SUM(work.cost) AS 'Coûts'
 FROM work
@@ -216,5 +216,6 @@ JOIN resource ON work.idResource = resource.id
 LEFT JOIN assignment ON work.idAssignment = assignment.id
 LEFT JOIN role ON assignment.idRole = role.id
 GROUP BY resource.fullName , role.name , work.year
-ORDER BY 1,2,3,4,5```
+ORDER BY 1,2,3,4,5
+```
 
