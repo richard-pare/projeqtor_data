@@ -16,17 +16,11 @@ id | Clé unique identifiant de l'enregistrement
 idProject | Identifiant du projet
 RefType et RefId | Identifiant de l'élément de planification 
 RefName | Nom donné à l'élément de planification
-InitialStartDate |
-ValidatedStartDate |
-PlannedStartDate |
+InitialStartDate, InitialEndDate, InitialDuration | | Date de début, Date de fin, Durée (demandé)
+ValidatedStartDate, ValidatedEndDate, ValidatedDuration | | Date de début, Date de fin, Durée (validé)
+PlannedStartDate, PlannedEndDate, PlannedDuration | | Date de début, Date de fin, Durée (planifié)
 RealStartDate |
-InitialEndDate |
-ValidatedEndDate |
-PlannedEndDate |
 RealEndDate |
-InitialDuration |
-ValidatedDuration |
-PlannedDuration |
 RealDuration |
 Idle |
 Elementary | 
