@@ -16,10 +16,10 @@ id | Clé unique identifiant de l'enregistrement
 idProject | Identifiant du projet
 RefType et RefId | Identifiant de l'élément de planification 
 RefName | Nom donné à l'élément de planification
-ValidatedStartDate, ValidatedEndDate, ValidatedDuration | | Date de début, Date de fin, Durée **(Validé)**
+ValidatedStartDate, ValidatedEndDate, ValidatedDuration | Elles sont utilisées pour arrêter la période pour la réalisation du projet ou d'une tâche. Elles ne sont pas contraignantes.  | Date de début, Date de fin, Durée **(Validé)**
 PlannedStartDate, PlannedEndDate, PlannedDuration | | Date de début, Date de fin, Durée **(Planifié)**
 RealStartDate, RealEndDate, RealDuration | La date de début indique le jour des premiers efforts saisis. La date de fin indique le jour des derniers efforts saisis (Lors qu'il n'y a plus de "reste à faire"). | Date de début, Date de fin, Durée **(Réel)**
-InitialStartDate, InitialEndDate, InitialDuration | Dates qu'à titre informatif. Elles sont utilisées pour inscrire la période souhaitée pour la réalisation du projet. | Date de début, Date de fin, Durée **(Demandé)**
+InitialStartDate, InitialEndDate, InitialDuration | Dates qu'à titre informatif. Elles sont utilisées pour inscrire la période souhaitée pour la réalisation du projet ou d'une tâche. | Date de début, Date de fin, Durée **(Demandé)**
 ValidatedWork, AssignedWork, RealWork, LeftWork, PlannedWork || **Effort** (validé, assigné, réel, reste, réévalué)
 ValidatedCost, AssignedCost, RealCost, LeftCost, PlannedCost || **Coût** (validé, assigné, réel, reste, réévalué)
 ExpenseValidatedAmount, ExpenseAssignedAmount, ExpenseRealAmount, ExpenseLeftAmount, ExpensePlannedAmount || **Dépenses** (validé, assigné, réel, reste, réévalué)
