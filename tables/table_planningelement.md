@@ -22,6 +22,8 @@ RealStartDate, RealEndDate, RealDuration | | Date de début, Date de fin, Durée
 InitialStartDate, InitialEndDate, InitialDuration | | Date de début, Date de fin, Durée **(Demandé)**
 ValidatedWork, AssignedWork, RealWork, LeftWork, PlannedWork || **Effort** (validé, assigné, réel, reste, réévalué)
 ValidatedCost, AssignedCost, RealCost, LeftCost, PlannedCost || **Coût** (validé, assigné, réel, reste, réévalué)
+ExpenseValidatedAmount, ExpenseAssignedAmount, ExpenseRealAmount, ExpenseLeftAmount, ExpensePlannedAmount || **Dépenses** (validé, assigné, réel, reste, réévalué)
+TotalValidatedCost, TotalAssignedCost, TotalRealCost, TotalLeftCost, TotalPlannedCost || **Coût total** (validé, assigné, réel, reste, réévalué)
 Idle |
 Elementary | 
 
