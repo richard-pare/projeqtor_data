@@ -18,11 +18,12 @@ RefType et RefId | Identifiant de l'élément de planification
 RefName | Nom donné à l'élément de planification
 ValidatedStartDate, ValidatedEndDate, ValidatedDuration | | Date de début, Date de fin, Durée **(Validé)**
 PlannedStartDate, PlannedEndDate, PlannedDuration | | Date de début, Date de fin, Durée **(Planifié)**
-RealStartDate, RealEndDate, RealDuration | | Date de début, Date de fin, Durée **(Réel)**
+RealStartDate, RealEndDate, RealDuration | La date de début indique le jour des premiers efforts saisis. La date de fin indique le jour des derniers efforts saisis (Lors qu'il n'y a plus de "reste à faire"). | Date de début, Date de fin, Durée **(Réel)**
 InitialStartDate, InitialEndDate, InitialDuration | | Date de début, Date de fin, Durée **(Demandé)**
 ValidatedWork, AssignedWork, RealWork, LeftWork, PlannedWork || **Effort** (validé, assigné, réel, reste, réévalué)
 ValidatedCost, AssignedCost, RealCost, LeftCost, PlannedCost || **Coût** (validé, assigné, réel, reste, réévalué)
 ExpenseValidatedAmount, ExpenseAssignedAmount, ExpenseRealAmount, ExpenseLeftAmount, ExpensePlannedAmount || **Dépenses** (validé, assigné, réel, reste, réévalué)
+ReserveAmount | | **Réserve** (reste)
 TotalValidatedCost, TotalAssignedCost, TotalRealCost, TotalLeftCost, TotalPlannedCost || **Coût total** (validé, assigné, réel, reste, réévalué)
 Idle |
 Elementary | 
