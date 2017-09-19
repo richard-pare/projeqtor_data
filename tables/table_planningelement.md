@@ -20,14 +20,14 @@ ValidatedStartDate, ValidatedEndDate, ValidatedDuration | Elles sont utilisées 
 PlannedStartDate, PlannedEndDate, PlannedDuration | Dates déterminés lors du calcul de la planification. | Date de début, Date de fin, Durée **(Planifié)**
 RealStartDate, RealEndDate, RealDuration | La date de début indique le jour des premiers efforts saisis. La date de fin indique le jour des derniers efforts saisis (Lors qu'il n'y a plus de "reste à faire"). | Date de début, Date de fin, Durée **(Réel)**
 InitialStartDate, InitialEndDate, InitialDuration | Dates qu'à titre informatif. Elles sont utilisées pour inscrire la période souhaitée pour la réalisation du projet ou d'une tâche. | Date de début, Date de fin, Durée **(Demandé)**
-ValidatedWork | Les efforts validés permettent de fixer la charge pour la réalisation d'un projet ou d'une tâche. | Effort validé
-AssignedWork | Les efforts assignés aux ressources pour la réalisation d'un projet ou d'une tâche. | Effort assigné
-RealWork | | Effort réel
-LeftWork | |  Effort reste
+ValidatedWork | Les efforts validés permettent de fixer la charge pour la réalisation d'un projet ou d'une tâche | Effort validé
+AssignedWork | Les efforts assignés aux ressources pour la réalisation d'un projet ou d'une tâche | Effort assigné
+RealWork | Les efforts effectués par les ressources pour la réalisation d'un projet ou d'une tâche | Effort réel
+LeftWork |  |  Effort reste
 PlannedWork | | Effort réévalué
-ValidatedCost | | Coût validé
-AssignedCost | | Coût assigné
-RealCost | | Coût réel
+ValidatedCost | Les coûts validés permettent de fixer le coût budgété pour la réalisation d'un projet ou d'une tâche | Coût validé
+AssignedCost | Les coûts estimés pour la réalisation d'un projet ou d'une tâche calculé à partir des efforts assignés aux ressources et de leurs coût journalier | Coût assigné
+RealCost | Les coûts engagés pour la réalisation d'un projet ou d'une tâche calculé à partir des efforts effectués par les ressources et leurs coûts journalier | Coût réel
 LeftCost | | Coût reste
 PlannedCost || Coût réévalué
 ExpenseValidatedAmount ExpenseAssignedAmount, ExpenseRealAmount, ExpenseLeftAmount, ExpensePlannedAmount || **Dépenses** (validé, assigné, réel, reste, réévalué)
