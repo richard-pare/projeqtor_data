@@ -23,13 +23,13 @@ InitialStartDate, InitialEndDate, InitialDuration | Dates qu'à titre informatif
 ValidatedWork | Les efforts validés permettent de fixer la charge pour la réalisation d'un projet ou d'une tâche | Effort validé
 AssignedWork | Les efforts assignés aux ressources pour la réalisation d'un projet ou d'une tâche | Effort assigné
 RealWork | Les efforts effectués par les ressources pour la réalisation d'un projet ou d'une tâche | Effort réel
-LeftWork |  |  Effort reste
-PlannedWork | | Effort réévalué
+LeftWork | Le travail restant aux ressources pour la réalisation d'un projet ou d'une tâche |  Effort reste
+PlannedWork | Les efforts réévalués pour terminer la réalisation d'un projet ou d'une tâche  | Effort réévalué
 ValidatedCost | Les coûts validés permettent de fixer le coût budgété pour la réalisation d'un projet ou d'une tâche | Coût validé
 AssignedCost | Les coûts estimés pour la réalisation d'un projet ou d'une tâche calculé à partir des efforts assignés aux ressources et de leurs coût journalier | Coût assigné
 RealCost | Les coûts engagés pour la réalisation d'un projet ou d'une tâche calculé à partir des efforts effectués par les ressources et leurs coûts journalier | Coût réel
-LeftCost | | Coût reste
-PlannedCost || Coût réévalué
+LeftCost | Les coûts restants pour la réalisation d'un projet ou d'une tâche calculé à partir du travail restant | Coût reste
+PlannedCost | Les coûts réévalés | Coût réévalué
 ExpenseValidatedAmount ExpenseAssignedAmount, ExpenseRealAmount, ExpenseLeftAmount, ExpensePlannedAmount || **Dépenses** (validé, assigné, réel, reste, réévalué)
 ReserveAmount | | **Réserve** (reste)
 TotalValidatedCost, TotalAssignedCost, TotalRealCost, TotalLeftCost, TotalPlannedCost || **Coût total** (validé, assigné, réel, reste, réévalué)
