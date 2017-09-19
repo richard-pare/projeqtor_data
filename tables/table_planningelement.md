@@ -30,8 +30,11 @@ AssignedCost | Les coûts estimés pour la réalisation d'un projet ou d'une tâ
 RealCost | Les coûts engagés pour la réalisation d'un projet ou d'une tâche calculé à partir des efforts effectués par les ressources et leurs coûts journalier | Coût réel
 LeftCost | Les coûts restants pour la réalisation d'un projet ou d'une tâche calculé à partir du travail restant | Coût reste
 PlannedCost | Les coûts réévalés | Coût réévalué
-ExpenseValidatedAmount ExpenseAssignedAmount, ExpenseRealAmount, ExpenseLeftAmount, ExpensePlannedAmount || **Dépenses** (validé, assigné, réel, reste, réévalué)
-ReserveAmount | | **Réserve** (reste)
+ExpenseValidatedAmount | Les dépenses validées permettent de fixer le coût budgété pour les dépenses d'un projet | Dépenses validé
+ExpenseAssignedAmount | La somme des montants planifiés de toutes les dépenses d'un projet | Dépenses assigné
+ExpenseRealAmount | La somme des dépenses engagées d'un projet | Dépenses réel
+ExpenseLeftAmount | La somme des dépenses non engagées d'un projet  | Dépenses reste
+ExpensePlannedAmount | Le montant réévalué des dépenses| Dépenses réévalué
 TotalValidatedCost, TotalAssignedCost, TotalRealCost, TotalLeftCost, TotalPlannedCost || **Coût total** (validé, assigné, réel, reste, réévalué)
 Idle |
 Elementary | 
