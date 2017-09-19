@@ -25,7 +25,7 @@ AssignedWork | Les efforts assignés aux ressources pour la réalisation d'un pr
 RealWork | Les efforts effectués par les ressources pour la réalisation d'un projet ou d'une tâche | Effort réel
 LeftWork | Le travail restant aux ressources pour la réalisation d'un projet ou d'une tâche |  Effort reste
 PlannedWork | Les efforts réévalués pour terminer la réalisation d'un projet ou d'une tâche  | Effort réévalué
-ValidatedCost, ExpenseValidatedAmount, TotalValidatedCost | Montants budgéter pour les efforts des ressources et les dépenses d'un projet | Coût, dépenses, Coût total **(Validé)**
+ValidatedCost, ExpenseValidatedAmount, TotalValidatedCost | Montants budgéter pour les efforts des ressources et les dépenses d'un projet | Coût, Dépenses, Coût total **(Validé)**
 AssignedCost | Les coûts estimés pour la réalisation d'un projet ou d'une tâche calculé à partir des efforts assignés aux ressources et de leurs coût journalier | Coût assigné
 RealCost | Les coûts engagés pour la réalisation d'un projet ou d'une tâche calculé à partir des efforts effectués par les ressources et leurs coûts journalier | Coût réel
 LeftCost | Les coûts restants pour la réalisation d'un projet ou d'une tâche calculé à partir du travail restant | Coût reste
