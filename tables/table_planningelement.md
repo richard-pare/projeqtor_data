@@ -35,7 +35,11 @@ ExpenseAssignedAmount | La somme des montants planifiés de toutes les dépenses
 ExpenseRealAmount | La somme des dépenses engagées d'un projet | Dépenses réel
 ExpenseLeftAmount | La somme des dépenses non engagées d'un projet  | Dépenses reste
 ExpensePlannedAmount | Le montant réévalué des dépenses| Dépenses réévalué
-TotalValidatedCost, TotalAssignedCost, TotalRealCost, TotalLeftCost, TotalPlannedCost || **Coût total** (validé, assigné, réel, reste, réévalué)
+TotalValidatedCost | Total des coûts budgétés pour les ressources et les dépenses d'un projet | Coût total validé
+TotalAssignedCost | Total des coûts estimés des ressources et du montant planifiés des dépenses d'un projet | Coût total assigné
+TotalRealCost | Total des coûts engagés par les ressources et les dépenses d'un projet| Coût total réel
+TotalLeftCost | Total des coûts restants des efforts des ressources et les dépenses non engagées d'un projet | Coût total reste
+TotalPlannedCost | Montant total des coûts réévalués des efforts des ressources et des dépenses d'un projet  | Coût total réévalué
 Idle |
 Elementary | 
 
